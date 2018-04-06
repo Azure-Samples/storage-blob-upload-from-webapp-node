@@ -10,7 +10,7 @@ Clone the repository to your machine:
 git clone https://github.com/Azure-Samples/storage-blob-upload-from-webapp-node.git
 ```
 
-Change into the `todo -> folder name`:
+Change into the `storage-blob-upload-from-webapp-node`:
 
 ```bash
 cd storage-blob-upload-from-webapp-node
