@@ -1,57 +1,39 @@
-# Project Name
+# Azure Storage Blob Upload from a Node.js Web Application
 
-(short, 1-3 sentenced, description of the project)
+This sample demonstrates how to use the Azure Storage SDK in the context of an [Express](https://expressjs.com/) application to upload images into Azure Blob Storage.
 
-## Features
+## Getting started
 
-This project framework provides the following features:
+Clone the repository to your machine:
 
-* Feature 1
-* Feature 2
-* ...
+```bash
+git clone https://github.com/Azure-Samples/storage-blob-upload-from-webapp-node.git
+```
 
-## Getting Started
+Change into the `todo -> folder name`:
 
-### Prerequisites
+```bash
+cd storage-blob-upload-from-webapp-node
+```
 
-(ideally very short, if any)
+Install the dependencies via `npm`:
 
-- OS
-- Library version
-- ...
+```bash
+npm install
+```
 
-### Installation
+## Adding a connection string
 
-(ideally very short)
+Navigate to the [Azure Portal](https://portal.azure.com) and copy the connection string from your storage account (under **Settings** > **Access keys**) in to the `.env.example` file. Once you have pasted your connection string in to the file, rename the file from `.env.example` to `.env`.
 
-- npm install [package name]
-- mvn install
-- ...
+## Running the sample
 
-### Quickstart
-(Add steps to get up and running quickly)
+Start the server:
 
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
+```bash
+npm start
+```
 
+Navigate to [http://localhost:3000](http://localhost:3000) and upload an image to blob storage.
 
-## Demo
-
-A demo app is included to show how to use the project.
-
-To run the demo, follow these steps:
-
-(Add steps to start up the demo)
-
-1.
-2.
-3.
-
-## Resources
-
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+You can use the [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) to view blob container to verify your upload is successful.
