@@ -36,4 +36,4 @@ npm start
 
 Navigate to [http://localhost:3000](http://localhost:3000) and upload an image to blob storage.
 
-You can use the [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) to view blob container to verify your upload is successful.
+You can use the [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) to view blob container and verify your upload is successful.
