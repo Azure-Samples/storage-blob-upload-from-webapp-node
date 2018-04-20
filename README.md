@@ -10,13 +10,13 @@ Clone the repository to your machine:
 git clone https://github.com/Azure-Samples/storage-blob-upload-from-webapp-node.git
 ```
 
-Change into the `storage-blob-upload-from-webapp-node`:
+Change into the `storage-blob-upload-from-webapp-node` folder:
 
 ```bash
 cd storage-blob-upload-from-webapp-node
 ```
 
-Install the dependencies via `npm`:
+Install dependencies via `npm`:
 
 ```bash
 npm install
