@@ -1,4 +1,6 @@
-require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').load();
+}
 
 const
       express = require('express')
@@ -22,7 +24,7 @@ const handleError = (err, res) => {
 
 const getBlobName = originalName => {
     const identifier = Math.random().toString().replace(/0\./, ''); // remove "0." from start of string
-    return `${originalName}-${identifier}`;
+    return `${identifier}-${originalName}`;
 };
 
 router.post('/', uploadStrategy, (req, res) => {
