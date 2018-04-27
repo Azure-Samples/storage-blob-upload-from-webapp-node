@@ -1,5 +1,6 @@
-<h1>{{title}}</h1>
+<h1>Image Resizer</h1>
 
+<h2>Upload photos</h2>
 <form id="upload-form" action="/upload" method="POST" enctype="multipart/form-data">
   <h2>Select an image to upload:</h2>
   <div class="upload-container"><input id="file-picker" type="file" name="image"></div>
@@ -8,9 +9,13 @@
 
 <p id="message">{{message}}</p>
 
+<h2>Generated Thumbnails</h2>
 {{#each this.thumbnails}}
   <img src="https://{{../accountName}}.blob.core.windows.net/{{../containerName}}/{{name}}">
 {{/each}}
+
+<hr>
+<p>This app has no official privacy policy. Your data will be uploaded to a service in order to produce a thumbnail. Your images will be public once you upload them and there is no automated way to remove them.</p>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
