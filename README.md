@@ -26,6 +26,10 @@ npm install
 
 Navigate to the [Azure Portal](https://portal.azure.com) and copy the connection string from your storage account (under **Settings** > **Access keys**) in to the `.env.example` file. Once you have pasted your connection string in to the file, rename the file from `.env.example` to `.env`.
 
+## Updating the container name
+
+After creating a storage account and container in Azure go to line 10 of `routes/index.js` and update it with your container name. 
+
 ## Running the sample
 
 Start the server:
