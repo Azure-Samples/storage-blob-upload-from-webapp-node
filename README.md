@@ -28,7 +28,7 @@ Navigate to the [Azure Portal](https://portal.azure.com) and copy the connection
 
 ## Updating the container name
 
-After creating a storage account and container in Azure go to line 10 of `routes/index.js` and update it with your container name. 
+After creating a storage account and container in Azure go to line 10 of `routes/index.js` and update it with your container name. Go to line 17 in `routes/upload.js` and also update container name. 
 
 ## Running the sample
 
