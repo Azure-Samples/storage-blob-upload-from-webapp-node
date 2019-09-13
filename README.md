@@ -1,3 +1,14 @@
+---
+page_type: sample
+languages:
+- javascript
+- html
+products:
+- azure
+description: "Azure Storage Blob Upload from a Node.js Web Application"
+urlFragment: storage-blob-upload-from-webapp-node
+---
+
 # Azure Storage Blob Upload from a Node.js Web Application
 
 This sample demonstrates how to use the Azure Storage SDK in the context of an [Express](https://expressjs.com/) application to upload images into Azure Blob Storage.
