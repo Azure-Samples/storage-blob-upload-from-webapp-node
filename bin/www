@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('node-blobs-image-resize:server');
+var debug = require('debug')('blobs-image-upload-node:server');
 var http = require('http');
 
 /**

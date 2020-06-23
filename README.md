@@ -2,18 +2,23 @@
 page_type: sample
 languages:
 - javascript
-- html
+- nodejs
+- 
 products:
 - azure
-description: "Azure Storage Blob Upload from a Node.js Web Application"
-urlFragment: storage-blob-upload-from-webapp-node
+- azure-storage
+- 
+description: "How to stream blobs using Azure Storage JavaScript v12 client libraries"
+urlFragment: stream-blobs-node
 ---
 
-# Azure Storage Blob Upload from a Node.js Web Application
+# How to stream blobs using Azure Storage JavaScript v12 client libraries
 
-This sample demonstrates how to use the Azure Storage SDK in the context of an [Express](https://expressjs.com/) application to upload images into Azure Blob Storage.
+This samples uses the Azure JavaScript v12.x client libraries to upload blobs to Azure Storage from a web app.
 
-## Getting started
+## Prerequisites
+
+If you don't have a Microsoft Azure subscription, you can get a [free account] before you begin.
 
 Clone the repository to your machine:
 
@@ -21,7 +26,7 @@ Clone the repository to your machine:
 git clone https://github.com/Azure-Samples/storage-blob-upload-from-webapp-node.git
 ```
 
-Change into the `storage-blob-upload-from-webapp-node` folder:
+Then, switch to the app folder:
 
 ```bash
 cd storage-blob-upload-from-webapp-node
@@ -33,9 +38,15 @@ Install dependencies via `npm`:
 npm install
 ```
 
-## Adding a connection string
+## This Sample shows how to do following operations of Storage Blobs
 
-Navigate to the [Azure Portal](https://portal.azure.com) and copy the connection string from your storage account (under **Settings** > **Access keys**) in to the `.env.example` file. Once you have pasted your connection string in to the file, rename the file from `.env.example` to `.env`.
+* Create a storage account.
+* Create a container.
+* Upload a stream to [blockblob].
+
+## Adding your storage account name and key
+
+Navigate to your storage account in the [Azure Portal] and copy the account name and key (under **Settings** > **Access keys**) into the `.env.example` file. Save the file and then rename it from `.env.example` to `.env`.
 
 ## Running the sample
 
@@ -45,6 +56,13 @@ Start the server:
 npm start
 ```
 
-Navigate to [http://localhost:3000](http://localhost:3000) and upload an image to blob storage.
+Navigate to [http://localhost:3000] and upload an image to blob storage.
 
-You can use the [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) to view blob containers and verify your upload is successful.
+You can use the [Azure Storage Explorer] to view blob containers and verify your upload is successful.
+
+<!-- LINKS -->
+[blockblob]: https://docs.microsoft.com/en-us/rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs
+[Azure Portal]: https://portal.azure.com
+[http://localhost:3000]: http://localhost:3000
+[Azure Storage Explorer]: https://azure.microsoft.com/features/storage-explorer/
+[free account]: http://go.microsoft.com/fwlink/?LinkId=330212
