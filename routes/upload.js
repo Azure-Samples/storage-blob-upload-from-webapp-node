@@ -1,9 +1,9 @@
 if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').load();
+    require('dotenv').config();
 }
 
 const
-      express = require('express')
+    express = require('express')
     , router = express.Router()
 
     , multer = require('multer')
@@ -15,7 +15,7 @@ const
 
     , getStream = require('into-stream')
     , containerName = 'images'
-;
+    ;
 
 const handleError = (err, res) => {
     res.status(500);
@@ -30,20 +30,20 @@ const getBlobName = originalName => {
 router.post('/', uploadStrategy, (req, res) => {
 
     const
-          blobName = getBlobName(req.file.originalname)
+        blobName = getBlobName(req.file.originalname)
         , stream = getStream(req.file.buffer)
         , streamLength = req.file.buffer.length
-    ;
+        ;
 
     blobService.createBlockBlobFromStream(containerName, blobName, stream, streamLength, err => {
 
-        if(err) {
+        if (err) {
             handleError(err);
             return;
         }
 
-        res.render('success', { 
-            message: 'File uploaded to Azure Blob storage.' 
+        res.render('success', {
+            message: 'File uploaded to Azure Blob storage.'
         });
     });
 });
