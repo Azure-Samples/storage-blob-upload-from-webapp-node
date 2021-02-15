@@ -1,15 +1,15 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00b7ff;
 }
 
 .upload-container {
-  border: solid 1px #ccc;
-  padding: 10px;
-  max-width: fit-content;
-  margin-bottom: 10px
+    border: solid 1px #ccc;
+    padding: 10px;
+    max-width: fit-content;
+    margin-bottom: 10px;
 }
