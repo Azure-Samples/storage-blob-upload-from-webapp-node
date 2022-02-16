@@ -10,9 +10,7 @@ const
     , inMemoryStorage = multer.memoryStorage()
     , uploadStrategy = multer({ storage: inMemoryStorage }).single('image')
 
-    , azureStorage = require('azure-storage')
-    , blobService = azureStorage.createBlobService()
-
+    , { BlockBlobClient } = require('@azure/storage-blob')
     , getStream = require('into-stream')
     , containerName = 'images'
 ;
@@ -31,21 +29,25 @@ router.post('/', uploadStrategy, (req, res) => {
 
     const
           blobName = getBlobName(req.file.originalname)
+        , blobService = new BlockBlobClient(process.env.AZURE_STORAGE_CONNECTION_STRING,containerName,blobName)
         , stream = getStream(req.file.buffer)
         , streamLength = req.file.buffer.length
     ;
 
-    blobService.createBlockBlobFromStream(containerName, blobName, stream, streamLength, err => {
-
+    blobService.uploadStream(stream, streamLength)
+    .then(
+        ()=>{
+            res.render('success', { 
+                message: 'File uploaded to Azure Blob storage.' 
+            });
+        }
+    ).catch(
+        (err)=>{
         if(err) {
             handleError(err);
             return;
         }
-
-        res.render('success', { 
-            message: 'File uploaded to Azure Blob storage.' 
-        });
-    });
+    })
 });
 
 module.exports = router;
