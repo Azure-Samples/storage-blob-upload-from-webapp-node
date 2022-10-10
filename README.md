@@ -35,7 +35,11 @@ npm install
 
 ## Adding a connection string
 
-Navigate to the [Azure Portal](https://portal.azure.com) and copy the connection string from your storage account (under **Settings** > **Access keys**) in to the `.env.example` file. Once you have pasted your connection string in to the file, rename the file from `.env.example` to `.env`.
+Navigate to the [Azure Portal](https://portal.azure.com) and copy the connection string from your storage account (under **Settings** > **Access keys**) in to the `.env.example` file, where indicated.
+
+You must also specify the name of the Blob Storage container that you want to use, and that must already exist in your account, where indicated. 
+
+Once you have pasted your connection string in to the file, rename the file from `.env.example` to `.env`.
 
 ## Running the sample
 
