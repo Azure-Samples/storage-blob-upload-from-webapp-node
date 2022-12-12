@@ -41,6 +41,10 @@ You must also specify the name of the Blob Storage container that you want to us
 
 Once you have pasted your connection string in to the file, rename the file from `.env.example` to `.env`.
 
+## Updating the container name
+
+After creating a storage account and container in Azure go to line 10 of `routes/index.js` and update it with your container name. Go to line 17 in `routes/upload.js` and also update container name. 
+
 ## Running the sample
 
 Start the server:
