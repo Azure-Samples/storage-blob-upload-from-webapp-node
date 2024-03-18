@@ -12,7 +12,7 @@ const
 
     , { BlockBlobClient } = require('@azure/storage-blob')
     , getStream = require('into-stream')
-    , containerName = 'images'
+    , containerName = process.env.AZURE_STORAGE_CONTAINER_NAME
 ;
 
 const handleError = (err, res) => {
